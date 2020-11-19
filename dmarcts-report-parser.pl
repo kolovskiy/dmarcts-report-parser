@@ -188,6 +188,10 @@ if (exists $options{z}) {
 	$reports_source = TS_ZIP_FILE;
 }
 
+if (exists $options{c}) {
+	$source_options++;
+}
+
 if ($source_options > 1) {
 	show_usage();
 	die "Only one source option can be used (-i, -x, -m, -e or -z).\n";
